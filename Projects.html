@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-color: white;
+      font-size: 50px;
+      margin: 0px;
+    }
+
+    a{
+      color: white;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .option {
+      font-family: "Oswald", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      display: inline-block;
+      width: 29.5%;
+      height: 100%;
+      background-position: center;
+      background-repeat: contain;
+      background-size: contain;
+      background-repeat: no-repeat;
+      text-align: center;
+    }
+
+    #menu {
+      padding: 60px;
+      background-color: gray;
+      width: 100%;
+      height: 100%;
+    }
+
+    #taxi{
+      position: relative;
+      top: -510px;
+      width:600px; 
+      height:700px;
+      background-image:url(cab.png);
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: moveForward 1s ease-in-out forwards;
+      z-index: 10;
+      }
+    #sign {
+      position: relative;
+      top: -1750px;
+      left: 1100px;
+      width: 300px;
+      height: 300px;
+      background-image: url(sign.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 10;
+    }
+     #square {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+    }
+    #smallSquare{
+      z-index: 5;
+      position: relative;
+      top: -2005px;
+      left: 1208px;
+      width:82px;
+      height:30px;
+      background-color: white;
+    }
+    #sign:hover #square{
+      position: relative;
+      background-color: black;
+      left:-50px;
+      top:-240px;
+      width:400px;
+      height:200px;
+      z-index: 10;
+    }
+
+    .my-rectangle {
+      padding-top: 90px;
+      margin-top: 390px;
+      width: 100%;
+      height: 100px;
+      background-color: gray;
+      border: 7px solid black;
+    }
+
+    .horizontal_line {
+      border-bottom: 5px dashed rgb(236, 170, 68);
+      width: 100%;
+    }
+
+    #nyc{
+    position: relative;
+    top: -1377px;
+    width: 1500px;
+    height: 700px;
+    background-image: url(nyc.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto; 
+    z-index: 1;
+  }
+  .projects {
+    left:1045px;
+    top: -2435px;
+    position: relative;
+    z-index: 100;
+    padding: 20px;
+    margin-top: 100px;
+    font-size: 20px;
+  }
+
+
+    @keyframes moveForward {
+    0% 
+    {
+  transform: translateX(0);
+    }
+  100%{
+    transform: translateX(600px);
+  }
+  }
+  </style>
+</head>
+<body>
+<div id="menu">
+  <a href="index.html">
+  <div id="home" class="option">Home</div>
+  </a>
+  <a href="Projects.html">
+  <div id="project" class="option">Projects</div>
+  </a>
+  <a href="Journal.html">
+  <div id="journal" class="option">Journal</div>
+  </a>
+  </div>
+  <div class="my-rectangle">
+    <div class="horizontal_line"></div>
+  </div>
+  <div id="taxi"></div>
+  <div id="nyc"></div>
+  <div id="sign">
+    <div id="square"></div>
+  </div>
+  <div id="smallSquare"></div>
+  <div class="projects">
+    <a href="Project1.html" target="_blank">Project 1</a>
+  </div>
+
+</body>
+</html>
