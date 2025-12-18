@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hannukkah Card</title>
+	<style type="text/css">
+	h1{
+		text-align: center;
+		margin-top:-1400px;
+
+	}
+	#dreidal1{
+		position: relative;
+		left: 460px;
+		top: 100px;
+   		width: 1500px;
+   		height: 700px;
+   		background-image: url(face.png);
+   		background-size: contain;
+   		background-repeat: no-repeat;}
+	#dreidal2{
+		position: relative;
+		top:-350px;
+		left: 670px;
+		background-image: url(shin.png);
+		width: 200px;
+   		height: 200px;
+   		background-size: contain;
+   		background-repeat: no-repeat;
+   		opacity: 0;
+	}
+	#dreidal3{
+		position: relative;
+		top:-530px;
+		left: 690px;
+		background-image: url(gimmel.png);
+		width: 200px;
+   		height: 200px;
+   		background-size: contain;
+   		background-repeat: no-repeat;
+   		opacity: 0;
+	}
+	#dreidal4{
+		position: relative;
+		top:-750px;
+		left: 670px;
+		background-image: url(nun.png);
+		width: 200px;
+   		height: 200px;
+   		background-size: contain;
+   		background-repeat: no-repeat;
+   		opacity: 0;
+	}
+	#dreidal5{
+		position: relative;
+		top:-890px;
+		left: 680px;
+		background-image: url(hey.png);
+		width: 200px;
+   		height: 200px;
+   		background-size: contain;
+   		background-repeat: no-repeat;
+   		opacity: 0;
+	}
+	</style>
+</head>
+
+<body>
+	<script type="text/javascript">
+		let Clickcounter =0
+		document.addEventListener("click", function(){
+			Clickcounter=Clickcounter+1
+			console.log(Clickcounter)
+
+		if(Clickcounter==1){
+			dreidal2.style.opacity="1"
+		}
+		if(Clickcounter==2){
+			dreidal2.style.opacity="0"
+		}
+		if(Clickcounter==3){
+			dreidal3.style.opacity="1"
+		}
+		if(Clickcounter==4){
+			dreidal3.style.opacity="0"
+		}
+		if(Clickcounter==5){
+			dreidal4.style.opacity="1"
+		}
+		if(Clickcounter==6){
+			dreidal4.style.opacity="0"
+		}
+		if(Clickcounter==7){
+			dreidal5.style.opacity="1"
+		}
+		if(Clickcounter==8){
+			dreidal5.style.opacity="0"
+			Clickcounter=0
+		}
+		})
+</script>
+<div id="dreidal1"></div>
+<div id="dreidal2"></div>
+<div id="dreidal3"></div>
+<div id="dreidal4"></div>
+<div id="dreidal5"></div>
+<h1>HAPPY HANNUKKAH</h1>
+</body>
+</html>

@@ -65,31 +65,6 @@
       background-position: center;
       z-index: 10;
     }
-     #square {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 0;
-    }
-    #smallSquare{
-      z-index: 5;
-      position: relative;
-      top: -2005px;
-      left: 1208px;
-      width:82px;
-      height:30px;
-      background-color: white;
-    }
-    #sign:hover #square{
-      position: relative;
-      background-color: black;
-      left:-50px;
-      top:-240px;
-      width:400px;
-      height:200px;
-      z-index: 10;
-    }
 
     .my-rectangle {
       padding-top: 90px;
@@ -126,7 +101,16 @@
     margin-top: 100px;
     font-size: 20px;
   }
-
+  #text {
+    position: fixed;
+    top: 476px;
+    left: 1102px;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 20px;
+    z-index: 999999;
+  }
 
     @keyframes moveForward {
     0% 
@@ -157,12 +141,8 @@
   <div id="taxi"></div>
   <div id="nyc"></div>
   <div id="sign">
-    <div id="square"></div>
-  </div>
-  <div id="smallSquare"></div>
-  <div class="projects">
-    <a href="Project1.html" target="_blank">Project 1</a>
-  </div>
+  <a href="textprojects.html">
+  <div id="text">Click For<br>Projects</div>
 
 </body>
 </html>

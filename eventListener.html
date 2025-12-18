@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#ball{
+			width: 300px;
+			height: 200px;
+			left: 650px;
+			z-index: 1000;
+			position: absolute;
+			background-image: url(soccer.png);
+			background-size: contain;
+			background-repeat: no-repeat;}
+		#goal{
+			width: 800px;
+			height: 400px;
+			position: relative;
+			left: 30%;
+			background-image: url(goal.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	</style>
+
+</head>
+<body>
+<div id="ball"></div>
+<div id="goal"></div>
+
+<script type ="text/javascript">
+
+let bus = document.getElementById("ball")
+ball.style.top="640px"
+
+document.addEventListener("keypress", function(){
+		console.log(ball.style.top)
+		ball.style.top = parseInt(ball.style.top) - 10 +"px"
+		if (parseInt(ball.style.top) < 160) {
+        	alert("GOAL!!!!!!!!!!!") 
+
+        	ball.style.top="640px"
+
+    		}
+	})
+</script>
+</body>
+</html>
