@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
-	</head>
-	<body>
-		<script type="text/javascript">
-			function hi(x){
-				alert("hi "+ input)
-			}
-	hi("Alexandra")
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Generator</title>
+	<style type="text/css">
+	h1{
+		text-align: center;
+		font-size: 50px;
+		font-color: black;
+	}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	let  travel = ["Tails","Heads"]
+	document.addEventListener("click",function(){
+		let x = Math.round(Math.random()*2)
+		console.log(x)
+		alert(travel[x])
+	})
+	document.addEventListener("click",function(){
+		let r = Math.round(Math.random()*255)
+		let g = Math.round(Math.random()*255)
+		let b = Math.round(Math.random()*255)
 
-	function add (x, y) {
-	console.log(x+y)
-}
-add(1025,4334)
+		document.body.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+	})
+</script>
+<h1>Click to Flip a Coin</h1>
 </script>
 </body>
-</html>	
+</html>
