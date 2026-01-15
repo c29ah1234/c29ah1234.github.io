@@ -4,10 +4,11 @@
 	<style type ="text/css">
 
 		.littles{
-			width: 85px;
-			height: 67px;
+			width: 15px;
+			height: 15px;
 			border: 1px solid black;
 			display: inline-block;
+			position: absolute;
 		}
 	</style>
 
@@ -22,10 +23,23 @@
 			let r= Math.round(Math.random()*255)
 			let g= Math.round(Math.random()*255)
 			let b= Math.round(Math.random()*255)
+			let rotation = Math.random() * 360
 
 			confetti.style.backgroundColor="rgb(" + r + "," + g + "," + b+")"
+			confetti.style.top = Math.random() * 1000 + "px"
+			confetti.style.left = Math.random() * window.innerWidth + "px"
+			confetti.style.transform = "rotate("+rotation+"deg)"
+
+			function move(){
+				let fallFactor = 10
+				confetti.style.top = parseInt(confetti.style.top) + fallFactor + "px"
+				if (parseInt(confetti.style.top)>1000){
+					confetti.style.top = Math.random() * 200 + "px"
+				}
+			}
+			setInterval(move, 70)
 		}
-setInterval(makeConfetti, 10)
+setInterval(makeConfetti, 40)
 </script>
 
 </body>
