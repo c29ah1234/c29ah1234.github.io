@@ -2,13 +2,28 @@
 <html>
 <head>
 	<style type ="text/css">
-
+		body{
+			background-color: black;
+		}
 		.littles{
-			width: 15px;
-			height: 15px;
+			width: 5px;
+			height: 20px;
 			border: 1px solid black;
 			display: inline-block;
 			position: absolute;
+			animation-name: swing;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: ease-in-out;
+		}
+		@keyframes swing {
+			from {
+				transform: rotate(var(--startRot));
+			}
+			to {
+				transform: rotate(var(--endRot));
+			}
 		}
 	</style>
 
@@ -25,10 +40,16 @@
 			let b= Math.round(Math.random()*255)
 			let rotation = Math.random() * 360
 
+			let startRot = Math.random()* -60 + "deg"
+			let endRot = Math.random()* 60 + "deg"
+
 			confetti.style.backgroundColor="rgb(" + r + "," + g + "," + b+")"
 			confetti.style.top = Math.random() * 1000 + "px"
 			confetti.style.left = Math.random() * window.innerWidth + "px"
-			confetti.style.transform = "rotate("+rotation+"deg)"
+			// confetti.style.transform = "rotate("+rotation+"deg)"
+
+			confetti.style.setProperty("--startRot", startRot)
+			confetti.style.setProperty("--endRot", endRot)
 
 			function move(){
 				let fallFactor = 10
