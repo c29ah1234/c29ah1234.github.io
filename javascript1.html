@@ -16,6 +16,7 @@
 			animation-iteration-count: infinite;
 			animation-direction: alternate;
 			animation-timing-function: ease-in-out;
+			animation-name: swing3d;
 		}
 		@keyframes swing {
 			from {
@@ -23,6 +24,14 @@
 			}
 			to {
 				transform: rotate(var(--endRot));
+			}
+		}
+		@keyframes swing3d {
+			from {
+				transform: rotateX(45deg) rotateY(-180deg);
+			}
+			to{
+				transform: otateX(-45deg) rotateY(180deg);
 			}
 		}
 	</style>
