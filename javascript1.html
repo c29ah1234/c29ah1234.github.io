@@ -3,7 +3,7 @@
 <head>
 	<style type ="text/css">
 		body{
-			background-color: black;
+			background-color: white;
 		}
 		.littles{
 			width: 5px;
@@ -40,6 +40,11 @@
 </head>
 <body>
 	<script type="text/javascript">
+		let sports = ["soccer", "basketball", "football"]
+		let colors = ["#A7BED3", "#C6E2E9", "#F1FFC4", "#FFCAAF"]
+		let my_students = ["kate", "Parker", "Jiyaa"]
+		console.log(colors.length)
+		console.log(sports[0])
 		function makeConfetti(){
 			let confetti = document.createElement("div")
 			confetti.classList.add("littles")
@@ -51,8 +56,11 @@
 
 			let startRot = Math.random()* -60 + "deg"
 			let endRot = Math.random()* 60 + "deg"
+			let randomColorIndex = Math.floor(Math.random() * colors.length)
+			console.log(randomColorIndex)
+			confetti.style.backgroundColor = colors[randomColorIndex]
 
-			confetti.style.backgroundColor="rgb(" + r + "," + g + "," + b+")"
+			// confetti.style.backgroundColor="rgb(" + r + "," + g + "," + b+")"
 			confetti.style.top = Math.random() * 1000 + "px"
 			confetti.style.left = Math.random() * window.innerWidth + "px"
 			// confetti.style.transform = "rotate("+rotation+"deg)"
@@ -70,6 +78,10 @@
 			setInterval(move, 70)
 		}
 setInterval(makeConfetti, 40)
+for(let i = 0; i<1000; i++){
+	console.log(i)
+	makeConfetti()
+}
 </script>
 
 </body>
