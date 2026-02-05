@@ -16,7 +16,7 @@
 			animation-iteration-count: infinite;
 			animation-direction: alternate;
 			animation-timing-function: ease-in-out;
-			animation-name: swing3d;
+			
 		}
 		@keyframes swing {
 			from {
@@ -39,7 +39,10 @@
 
 </head>
 <body>
+	<button id="btn">drop confetti</button>
+	<input type="color" value ="#ff0000" id="colorPicker">
 	<script type="text/javascript">
+		
 		let sports = ["soccer", "basketball", "football"]
 		let colors = ["#A7BED3", "#C6E2E9", "#F1FFC4", "#FFCAAF"]
 		let my_students = ["kate", "Parker", "Jiyaa"]
@@ -58,7 +61,7 @@
 			let endRot = Math.random()* 60 + "deg"
 			let randomColorIndex = Math.floor(Math.random() * colors.length)
 			console.log(randomColorIndex)
-			confetti.style.backgroundColor = colors[randomColorIndex]
+			confetti.style.backgroundColor = colorPicker.value
 
 			// confetti.style.backgroundColor="rgb(" + r + "," + g + "," + b+")"
 			confetti.style.top = Math.random() * 1000 + "px"
@@ -77,11 +80,18 @@
 			}
 			setInterval(move, 70)
 		}
-setInterval(makeConfetti, 40)
-for(let i = 0; i<1000; i++){
-	console.log(i)
-	makeConfetti()
+// setInterval(makeConfetti, 40)
+
+let dropConfettiBtn = document.getElementById("btn")
+dropConfettiBtn.addEventListener("click", function() {
+	for (let i =0;i< 10;i++) {
+		makeConfetti()
+	}
 }
+
+	)
+let colorPicker = document.getElementById("colorPicker")
+console.log(colorPicker.value)
 </script>
 
 </body>
