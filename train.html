@@ -50,26 +50,41 @@
 	<input type="text" id ="person">
 
 	<div id ="train">
-		<div class="cart">Kate</div>
+		<!-- <div class="cart">Kate</div>
 		<div class="cart">Parker</div>
 		<div class="cart">Sophie</div>
+		<div class="cart">Alexandra</div> -->
 	</div>
 
 	<script>
-		let people = ["Kate", "Parker", "Evan"]
-		people.push("Jiyaa")
-		people.push("Owen")
+		let people = ["Kate", "Parker", "Sophie", "Owen"]
+		let train = document.getElementById("train")
+
+
+
+		function makeTrain(){
+			train.innerHTML=""
+			for(let i = 0; i < people.length; i++){
+			console.log(people[i])
+			let cart = document.createElement("div")
+			cart.classList.add("cart")
+			train.appendChild(cart)
+			cart.textContent = people[i]}
+
+		}
+		makeTrain()
+
 		let lastPerson = people.pop()
-		console.log(lastPerson)
-		console.log(people)
 		let addPersonBtn = document.getElementById("add-person"
 			)
 		let removeLastPersonBtn = document.getElementById("remove-last-person")
 		addPersonBtn.addEventListener("click", function(){
 			let personInput = document.getElementById("person")
 			people.push(personInput.value)
+			makeTrain()
 			personInput.value=""
 			console.log(people)
+
 		})
 		removeLastPersonBtn.addEventListener("click", function(){people.pop()
 			console.log(people)
