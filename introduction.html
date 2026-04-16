@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1/lib/p5.min.js"></script>
+</head>
+<body>
+	<script>
+	function setup() {
+		createCanvas(800,800)
+		background("hotpink")
+		stroke("hotpink")
+		strokeWeight(3)
+	}
+	function draw(){
+		
+  		for (let i = 0; i < 9; i++) {
+	  		for (let j = 0; j < 9; j++){
+	  			let x = i * 100
+	  			let y = j * 100
+	  			fill("white")
+	  			circle(x, y, 100)
+	  			if (i % 2 === 0) {
+	  				fill("hotpink")
+	  				circle(x, y, 20)
+	  			}
+	  		}
+	    }
+
+  	}
+	</script>
+
+</body>
+</html>
