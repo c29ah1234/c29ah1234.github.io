@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Instagram</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style>
+h1{
+	text-align: center;
+}
+.my-cool-image {
+position: absolute;
+  width: 500px;
+  margin-left: 370px;
+  top: 140px;
+}
+
+#outputBox{
+		position: absolute;
+		color: black;    
+		display: inline-block; 
+ 		font-size: 36px;    
+ 		text-align: center;  
+  		top: 800px; 
+  		z-index: -1;  
+	}
+
+</style>
+<body>
+	<input type="text" id="userInput" oninput="updateText()" placeholder="Type Caption...">
+
+	<div id="outputBox" style="border: 0px solid #ccc; z-index: 1000; margin-left: 300px; min-height: 100px; position: absolute; top: 780px; background-color: white; border-radius: 30px; width: 800px; height: 100px;"></div>
+
+
+<script>
+    function updateText() {
+   
+        let text = document.getElementById("userInput").value;
+    
+        document.getElementById("outputBox").innerText = text;
+    }
+</script>
+<img src="summer.png" class="my-cool-image">
+<h1>Caption the Instagram Post</h1>
+</body>
+</html>
+</body>
+</html>

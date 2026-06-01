@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style>
+.my-cool-image {
+  width: 50px;
+  rotate: 60deg;
+  margin-left: 760px;
+  margin-top: -8px;
+}
+h1{
+color: black;      
+ 		font-size: 36px;    
+ 		text-align: center;  
+  		padding: 20px;   
+  		margin-top: -270px;   
+}
+}
+</style>
+<body>
+	<input type="text" id="userInput" oninput="updateText()" placeholder="iMessage">
+
+<div id="outputBox" style="border: 0px solid #ccc; margin-top: 100px; min-height: 100px; background-color: rgb(33,138,255); border-radius: 30px; width: 800px; height: 100px;"></div>
+
+<script>
+    function updateText() {
+   
+        let text = document.getElementById("userInput").value;
+    
+        document.getElementById("outputBox").innerText = text;
+    }
+</script>
+<img src="img.png" class="my-cool-image">
+<h1>Text!</h1>
+</body>
+</html>
